@@ -334,7 +334,7 @@ class Changeid(Quote):
         if len(quotes['quotes']) == 0:
             raise CommandFailure('Quotes list is empty!')
         
-        if oldid > quotes['last_id'] or newid > quotes['last_id']: 
+        if oldid < 0 or oldid > quotes['last_id'] or newid < 0 or newid > quotes['last_id']: 
             raise CommandFailure('Index out of range!')
 
         #check that quote with ID newid does not exist
