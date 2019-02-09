@@ -32,7 +32,7 @@ def disable(command):
     if command_cls == Command:
         # There's a command in the config file that isn't a command
         raise InvalidCommand(
-            f"Error: {comm} is not a command, thus it can't be disabled")
+            f"Error: {command} is not a command, thus it can't be disabled")
     command_cls.disabled = True
 
 
